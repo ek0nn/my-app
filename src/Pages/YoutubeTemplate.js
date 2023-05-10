@@ -25,12 +25,16 @@ function YoutubeTemplate(props) {
     };
 
     const handleNext = () => {
-        setPage(prevPage => {
-            const nextPage = prevPage + 1;
+    setPage(prevPage => {
+        const nextPage = prevPage + 1;
+        if (nextPage <= 10) { // check if nextPage exceeds the limit
             navigate(`/YoutubeTemplate/${nextPage}`);
             return nextPage;
-        });
-    };
+        } else {
+            return prevPage; // if nextPage exceeds the limit, return the current page
+        }
+    });
+};
 
     return (
         <div className = "linkmain" > 
