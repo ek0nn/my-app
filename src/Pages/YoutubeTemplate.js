@@ -11,12 +11,14 @@ function YoutubeTemplate(props) {
     const [correctGuess, setCorrectGuess] = useState('');
 
     useEffect(() => {
+        
         if (snames[0]) {
             setCorrectGuess(snames[0].guess);
         }
     }, [snames]);
 
-    const checkAnswer = () => {
+    const checkAnswer = (e) => {
+        e.preventDefault();  
         if(input.toLowerCase() === correctGuess.toLowerCase()) {
             alert('Correct! The name of the Youtuber is indeed ' + correctGuess);
         } else {
