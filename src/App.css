@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Shadows Into Light', cursive;  
   }
-}
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shadows+Into+Light&display=swap');
+  
+  
+  .main{
+    display: flexbox;
+    background-color: #e5e5f7;
+opacity: 0.8;
+background-image: radial-gradient(#444cf7 2px, #e5e5f7 2px);
+background-size: 40px 40px;
+height: 100vh;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  .container-hero{
+    display: flexbox;
+    text-align: center;
+    color: rgb(43, 0, 255);
+    padding-top: 350px;
+    align-items: center;
+    justify-content: center;
+
   }
-}
+
+  .welcome{
+    font-size: 90px;
+  }
+  .welcome2{
+    font-size: 90px;
+    margin-bottom: 100px;
+  }
+  .link{
+    font-size: 60px;
+  }
+
+  .Cat{
+    width: 200px;
+    margin-right: 40px;
+    margin-top: 40px;
+    height: 100px;
+    font-size: 40px;
+    color: #444cf7;
+  }
+  .linkmain{
+    background-image: radial-gradient(#444cf7 2px, #e5e5f7 2px);
+    background-size: 40px 40px;
+    height: 100vh;
+align-items: center;
+display: flex;
+justify-content: center;
+flex-direction: column;
+
+  }
+  .guesscont{
+    display: flex;
+    
+  }
+
+  .imgHolder{
+    width: 600px;
+    height: 500px;
+    
+    margin-right: 50px;
+    background: #444cf7;
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+border: 1px solid  #444cf7;
+
+  }
+  .inputGuess{
+    width: 500px;
+    height: 60px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 30px;
+    background: rgba(255, 255, 255, 0.44);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10.9px);
+-webkit-backdrop-filter: blur(10.9px);
+border: 1px solid rgba(255, 255, 255, 0.98);
+  }
+  .submitbtn{
+    background: rgba(255, 255, 255, 0.44);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.9px);
+    -webkit-backdrop-filter: blur(10.9px);
+    border: 1px solid rgba(255, 255, 255, 0.98);
+    height: 60px;
+    width: 100px;
+    margin-top: 50px;
+    margin-left: 20px;
+    font-size: 30px;
+  }
+  .guess{
+    display: flex;
+    
+  }
