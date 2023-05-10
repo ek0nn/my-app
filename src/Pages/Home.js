@@ -7,7 +7,7 @@ export const Home = () => {
       <h1 className='welcome'>Welcome to,</h1>
       <h3 className='link'>Guess The Link</h3>
       <div class="btn-group" role="group" aria-label="Basic outlined example">
-        <Link to = "/youtubers"> 
+        <Link to = "/YoutubeTemplate/1"> 
   <button type="button" class="Cat">Youtubers</button>
   </Link>
   <button type="button" class="Cat"> soon</button>

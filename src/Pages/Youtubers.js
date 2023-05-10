@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Link, useParams } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { names } from '../names';
+import { Navigate } from 'react-router-dom';
 
 function Youtubers(props) {
+    const navigate = useNavigate();
 
     const correctGuess = 'Pewdiepie';
     const { id } = useParams();
@@ -17,37 +19,38 @@ function Youtubers(props) {
         }
     };
     const handleNext = () => {
-        setPage(prevPage => prevPage + 1);
-      }
+        setPage(prevPage => {
+            const nextPage = prevPage + 1;
+            if (nextPage <= 10) { // check if nextPage exceeds the limit
+                navigate(`/YoutubeTemplate/${nextPage}`);
+                return nextPage;
+            } else {
+                return prevPage; // if nextPage exceeds the limit, return the current page
+            }
+        });
+    };
   return (
-    <div class = "linkmain" > 
+    <div className = "linkmain" > 
     <h1 className='welcome2'>Youtubers</h1>
-    
-  
-    <div className='guesscont'>
-        <div className='imgHolder'>
-            <img className='imgHolder' src = "images/raygun.jpg"  /> 
+    {snames.map(pr => (
+        <div className='guesscont'>
+            <div className='imgHolder'>
+                <img className='imgHolder' src = {pr.img1}  /> 
+            </div>
+            <div className='imgHolder'>
+                <img className='imgHolder' src = {pr.img2}   /> 
+            </div>
+            <div className='imgHolder'>
+                <img className='imgHolder' src = {pr.img3}   /> 
+            </div>
         </div>
-        <div className='imgHolder'>
-        <img className='imgHolder' src = "images/die.jpg"  /> 
-        </div>
-        <div className='imgHolder'>
-
-        <img className='imgHolder' src = "images/pie.jpg"  /> 
-        </div>
-
-    </div>
-
+    ))}
     <form className='guess'>
-    <input  value={input}  onChange={(e) => setInput(e.target.value)} type="name" class="inputGuess"  placeholder='Enter Your Guess'/>
-    <button className = "submitbtn" onClick={checkAnswer}>Submit</button>
+        <input  value={input}  onChange={(e) => setInput(e.target.value)} type="name" className="inputGuess"  placeholder='Enter Your Guess'/>
+        <button className = "submitbtn" onClick={checkAnswer}>Submit</button>
     </form>
-    <Link to={`/YoutubeTemplate/${1 + 1}`}> 
-
     <button className = "submitbtn"  onClick={handleNext}>Next</button>
-    
-    </Link>
-     </div>
+</div>
      
   )
 }

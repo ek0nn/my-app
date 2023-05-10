@@ -1,7 +1,10 @@
-import pew from "./images/raygun.jpg"
+import pew1 from "./images/raygun.jpg"
+import pew2 from "./images/die.jpg"
+import pew3 from "./images/pie.jpg"
 import mark from "./images/mark.jpg"
 import multiplicationsymbol from "./images/multiplicationsymbol.jpg"
 import plier from "./images/plier.jpg"
+
 import mrbeast1 from "./images/mrbeast.jpg"
 import mrbeast2 from "./images/mrbeast2.jpg"
 import mrbeast3 from "./images/mrbeast3.jpg"
@@ -36,9 +39,9 @@ export const names = [
     {
         id: "1",
         guess:"pewdiepie",
-        img1: pew,
-        img2: pew,
-        img3: pew
+        img1: pew1,
+        img2: pew2,
+        img3: pew3
 
     },
     {
